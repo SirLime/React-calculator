@@ -1,0 +1,79 @@
+@import url("https://fonts.googleapis.com/css?family=VT323");
+
+.app {
+  box-sizing: border-box;
+}
+
+.calculator {
+  max-width: 600px;
+  min-width: 400px;
+  padding: 2vh;
+  background-color: #222;
+}
+
+.keyboard {
+  display: grid;
+  grid-gap: 1vh;
+  grid-template: repeat(5, 1fr) / repeat(4, 1fr);
+  grid-template-areas:
+    "o o o o"
+    "a a a b"
+    "a a a b"
+    "a a a c"
+    "d d e c";
+  height: 75vh;
+  margin: 0.5em;
+}
+
+.display {
+  height: 12vh;
+  margin: 1vh;
+  padding: 0.1em;
+  background-color: silver;
+  border-radius: 5px;
+  font-family: "VT323";
+  font-size: 5em;
+  text-align: right;
+}
+
+.button {
+  padding: 10px;
+  background-color: #444;
+  color: #ccc;
+  border-radius: 5px;
+  font-size: 4em;
+}
+
+.operator {
+  background-color: #f72;
+  color: #ccc;
+}
+
+.numbers {
+  display: grid;
+  grid-template: repeat(3, 1fr) / repeat(3, 1fr);
+  grid-gap: 1vh;
+}
+
+.operators-row {
+  grid-area: o;
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  grid-gap: 1vh;
+}
+.numbers {
+  grid-area: a;
+}
+.plus {
+  grid-area: b;
+}
+.equal {
+  grid-area: c;
+  background-color: #e34;
+}
+.zero {
+  grid-area: d;
+}
+.dot {
+  grid-area: e;
+}
